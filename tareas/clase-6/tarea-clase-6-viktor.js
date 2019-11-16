@@ -9,7 +9,7 @@ Punto bonus: Crear un botón para "empezar de nuevo" que empiece el proceso nuev
 const botonIngreso = document.querySelector('#ingresar-numero');
 const cantitadDeFamiliares = document.querySelector('#caja-familiares');
 const botonCalcular = document.querySelector('#calcular');
-
+const botonReset = document.querySelector('#resetear')
 
 
 
@@ -22,6 +22,9 @@ function crearFormulario(numero1) {
     const textoParrafo = document.createTextNode('Edad: ');
     const nuevoInput = document.createElement('input');
     nuevoInput.setAttribute("class", "edad-familias")
+    nuevoForm.setAttribute("class", "reset-form")
+
+
 
 
 
@@ -73,12 +76,25 @@ botonIngreso.onclick = function () {
         for (i = 0; i < edadFamiliasArr.length; i++) {
             contenedorArray.push(Number(edadFamiliasArr[i].value))
             console.log(contenedorArray)
-            
+
 
         }
-        
+
         document.querySelector('#resultados').innerText = `La edad mas baja y la mas alta son: ${edadMasBajaYAlta(contenedorArray)}`
         document.querySelector('#promedio').innerText = `El promedio de edad de tu familia es de: ${promedioEdad(contenedorArray)}`
+
+        botonReset.onclick = function () {
+            let inputs = document.getElementsByClassName('reset-form');
+            while (inputs.length) inputs[0].parentNode.removeChild(inputs[0]);
+
+            
+
+            return false;
+        }
+
+
+
+
 
         return false;
     }

@@ -116,12 +116,4 @@ Al hacer click en "calcular", mostrar en un elemento pre-existente el mayor sala
 
 Punto bonus: si hay inputs vacíos, ignorarlos en el cálculo (no contarlos como 0).
 */
-/*
-botonIngreso = document.querySelector('#ingresar-numero');
-cantitadDeFamiliares = document.querySelector('#caja-familiares');
-botonCalcular = document.querySelector('#calcular');
-resultados = document.querySelector('#resultados');
-contenedor = 0;
 
-
- */
